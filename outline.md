@@ -45,9 +45,8 @@ ensures users are granted only the access they need to perform their jobs, and n
 blocks SYN flood attacks
 
 # Authentication
-"Something you have" | "Something you are"
----|---
-|Hardware Tokens<br>Example: RSA tokens<br>uses a one-time password for authentication.||
+Something you have | Something you are | Something you know | Do Not Require Hardware
+---|---|---|---
+|Hardware Tokens<br>Example: RSA tokens<br>uses a one-time password for authentication.| Biometric (ex: fingerprint | PIN ||
+|||password||
 
-
-###### Biometric methods
