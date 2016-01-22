@@ -214,6 +214,7 @@ ID | #
 # Firewalls
  - use ACLs as rules
  - implicit deny
+
 ---
 # CIA
 Confidentiality | Integrity | Availability
@@ -317,4 +318,4 @@ Something you have | Something you are | Something you know
 ###### Digital Signature
  - **non-repudiation**
  - integrity
-  ---
+---
