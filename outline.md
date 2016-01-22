@@ -26,4 +26,29 @@ DENY or ALLOW| TCP/UDP/IP, occasionally ICMP |  IP addr (or range,subnet,ANY) | 
 # Firewalls
  - use ACLs as rules
  - implicit deny
- 
+
+# CIA
+Confidentiality | Integrity | Availability
+---|---|---
+| protecting/securing data | ensure systems are not susceptible to unauthorized changes. | ensure critical systems provide uninterrupted service 
+|encryption|hashes|RAID (Redundant Array of Inexpensive Disks)|
+|access controls|||
+|steganography|||
+
+### Digital Signature
+ - authentication
+ - **non-repudiation**
+ - integrity
+### Least Privilege
+ensures users are granted only the access they need to perform their jobs, and no more.
+### Flood guards
+blocks SYN flood attacks
+
+# Authentication
+"Something you have" | "Something you are"
+---|---
+|Hardware Tokens||
+|Example: RSA tokens||
+uses a one-time password for authentication.
+
+###### Biometric methods
