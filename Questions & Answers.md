@@ -1,9 +1,9 @@
 # Questions & Answers
- 1. A security admin is implementing a security program that addresses **confidentiality** and **availability**. What else should the administrator include? _Ensure systems are not susceptible to unauthorized changes_
- 2. You need to transmit **PII (Personally Identifiable Information)** by email confidentially. _Encrypt it before sending_
+ 1. A security admin is implementing a security program that addresses confidentiality and availability. What else should the administrator include? _Ensure systems are not susceptible to unauthorized changes_
+ 2. You need to transmit PII (Personally Identifiable Information) by email confidentially. _Encrypt it before sending_
  3. Lisa manages networks and mantians copies of the conf files for all routers and switches. She regularly creates hashes for these files and compares them with the previous week. Which security goal is she pursuing? _Integrity_
- 4. An organization wants to provide protection against malware. Admins have installed antivirus software on all computers. They also implemented a firewall and **IDS (Intrusion Detection System)** on the network. What identifies this principle? _Layered security_
- 5. Someone forgot their password. What should help desk do? _Verify the user's account exists_
+ 4. An organization wants to provide protection against malware. Admins have installed antivirus software on all computers. They also implemented a firewall and IDS (Intrusion Detection System) on the network. What identifies this principle? _Layered security_
+ 5. Someone forgot their password. What should help desk do? _**Verify the identity of the user, then create a temporary password that expires after first use.  This forces the user to create a new password.**_
  6. Which type of authentication does a hardware token provide? _???_
  7. Which type of authenication is a retina scan? _Biometric_
  8. Users are required to log on to their computers with a smart card and a PIN. What describes this? _Multifactor authentication_
@@ -54,4 +54,63 @@ After saving these settings, an employee reports that he cannot access the wirel
  46. An organization recently suffered an outage after a technician installed an application update on a vital server during peak hours.  The server remained down until administrators were able to install a previous version of the application on the server.  How to prevent this in the future? _Create a patch management policy_
  47. You are evaluating a critical industrial control system. You want to ensure the system has security controls to support availability.  Which meets your needs? _Implementing control redundancy and diversity_
  48. Of the following choices, what are valid security controls for mobile devices? _screen Locks, device encryption, and remote wipe_
- 49. A new mobile device security policy has authorized the use of employee-owned devices, but mandates additional security controls to protect them if devi
+ 49. A new mobile device security policy has authorized the use of employee-owned devices, but mandates additional security controls to protect them if devices are lost or stolen.  What do? _Screen Locks and device encryption_
+ 50. You want to deter an attacker from using brute force to gain access to a mobile device. What do? _Account lockout settings_
+ 51. Management is considering allowing users to connect to the corporate network with their own devices. What represents a security concern? _Inability to ensure devices are up to date with current system patches_
+ 52. Your organization is planning to issue mobile devices to some employees, but they are concerned about protecting the confidentiality of data if the devices are lost or stolen.  Which is the best way to secure data at rest on a mobile device? _Full device encryption_
+ 53. Your organization recently purchased several new laptops for employees.  You're asked to encrypt the laptop's hard drives without purchasing additional hardware. What do you use? _???_
+ 54. Management within your organization wants to limit documents copied to USB flash drives.  What can be used to meet this goal? _???_
+ 55. You installed code designed to enable your account automatically, three days after anyone disables it.  What does this describe? _Logic bomb_
+ 56. Lisa recently completed an application used by the Personnel dept. to store PII and other employee info.  She programmed in the ability to access this application with credentials that only she knows, so that she can perform remote maintenance on the application if necessary. What does this describe? _backdoor_
+ 57. A recent change in an organization's security policy states that monitors need to be positioned so that they cannot be viewed from outside any windows. Why? _reduce success of shoulder surfing_
+ 58. You are troubleshooting an intermittent connectivity issue with a web server. After examining the logs, you identify repeated connection attempts from various IP addresses.  You realize these connection attempts are overloading the server, preventing it from responding to other connections.  What's happening? _DDoS attack_
+ 59. Your organization includes the following statement in the security policy: 
+ >"Security controls need to protect against both online and offline password brute force attacks."       
+
+What is least helpful to meet these goals? _Password complexity_
+ 60. A code review of a web application discovered that the application is not performing boundary checking.  What should the web developer add to theis application to resolve this issue? _???_
+ 61. A web developer is using methods to validate user input in a web site application.  WHich attack isn't prevented by validating user input? _???_  62. Checking the logs of a web server, you see the following entry:
+     
+         198.252.69.169--[1/Sep/2013:05:20]"GET/index.php?username=ZZZZZZZZZZZZZZZZZZZZZZZBBBBBBBBCCCCCCCHTTP/1.1" "http://gcgapremiu.com/security/" "Chrome31"
+What's going on here? _a buffer overflow attack_
+ 63. Looking a logs for an online web app, you see that someone has entered the following prhase into several queries:
+     ' or '1'='1' -- 
+    What's going on here _An XSS attack_
+ 64. A security tester is using **fuzzing** techniques to test an app. What does fuzzing use to test the app? _???_
+ 65. An organization has purchased fire insurance to manage the risk of a potential fire. What method are they using? _Risk acceptance_
+ 66. You are asked to identify the number of times a specific type of incident occurs per year. What is another name for this? _???_
+ 67. Lisa needs to calculate the total ALE for a group of servers used in the network.  During the past two years, five of the servers failed.  The hardware cost to replace each server $3,500, and the downtime has resulted in $2,500 of additional losses. What's the ALE? _???_
+ 68. Security experts at your organization have determined that your network has been repeatedly attacked from multiple entities in a foreign country.  Research indicates these are coordinated and sophisticated attacks.  What's going on? _advanced persistent threat_
+ 69. You're performing a vulnerability assessment. Whats your goal? _Determine if vulnerabilities can be exploited_
+ 70. You need to ensure that several systems have all appropriate security controls and patches. However, you are not to attack or compromise any of these systems. What do? _Vulnerability scan_
+ 71. What is a particularly invasive type of testing? _penetration test_
+ 72. A security professional is testing the functionality of an application, but doesn't have any knowledge about the internal code of an application. What type of test is this? _black box_
+ 73. Testers are analyzing a web app your organizaiton is planning to deploy.  They have full access to product documentation, including the code and data structures used by the application. What kind of test should they perform? _white box_
+ 74. A network admin is attempting to identify all traffic on an internal network. What tool is a good choice? _protocol analyzer_
+ 75. Your organization security policy requires that personnel notify security administrators if an incident occurs.  However, this is not occuring consistently.  Which of the following could the organization implement to ensure security admins are notified in a timely manner? _Incident response team_
+ 76. A security admin is reviewing an organization's security policy and notices that the policy doesn't define a time frame for reviewing user rights and permissions.  What is the minimum time frame she should recommend? _at least once a year_
+ 77. Security personnel recently performed a security audit.  They identified several employees who had permissions for previously held jobs within the company.  What should the organization do to prevent this in the future? _account management controls_
+ 78. You are a technician at a small organization.  You need to add fault-tolerance capabilities within the business to increase the availability of data.  However, you need to keep costs low. What meets your need? _???_
+ 79. An organization needs to identify a continuity of operations plan that will allow it to provide temporary IT supprot during a disaster.  The organization doesn't want a dedicated site.  What do? _**cold site**_
+ 80. Monty Burns is the CEO of a nuclear power plant. What should the company have in case something happens to him? _sucession planning_
+ 81. A continuity of operations plan for an organization includes the use of a **warm site**.  The **BCP** coordinator wants to verify that the organization's backup data center is prepared to implement the warm site if necessary. What do? _perform a disaster recovery exercise_
+ 82. Users are complaining of intermittent connectivity issues.  You investigate and discover that new network cables for these user systems run over fluorescent lights. What do? _**EMI shielding**_
+ 83. A software company occasionally provides application updates and patches via its web site.  It also provides a checksum for each update and patch.  Which of the following describes the purpose of the checksum? _Integrity of the application_
+ 84. A function converts data into a string of characters which cannot be reversed to re-create the original data. What type of encryption is this? _asymmetric encryption_
+ 85. Which of the following is a symmetric encryption algorithm that encrypts data one bit at a time? _stream cipher_
+ 86. A supply company has several legacy systems connected together within a warehouse.  An external security audit discovered the company is using **DES** and mandated the company upgrade DES to meet minimum security requirements.  The company plans to replace the legacy systems next year, but needs to meet the requirements from the audit.  What's likely the most simple upgrade for these systems? _**3DES**_
+ 87. Network admins in your organization need to administrator firewalls, security appliances, and other network devices.  These devices are protected with strong passwords, and the passwords are stored in a file. How to protect this password list? _file encryption_
+ 88. An employee at your organization is suspected of leaking data to a competitor. Investigations indicate he sent several email messages containing pictures of his dog.  Investigators have not been able to identify any other suspicious activity.  What's going on? _He's leaking data using steganography_
+ 89. You are planning to encrypt data in transit with **IPsec**. What is likely to be used with IPsec? _???_
+ 90. Bart wants to send a secure email to Lisa, so he decides to encrypt it.  He wants to ensure that only Lisa can decrypt it. What does Lisa need to meet this requirement? _Lisa's private key_
+ 91. An organization requested bids for a contract and asked companies to submit their bids via email.  After winning the bid, Acme realized it couldn't meet the requirements of the contract.  Acme instead stated that it never submitted the bid.  What would prove to the organization that Acme did submit the bid? _Digital signature_
+ 92. Application developers are creating an application that requires users to log on with strong passwords.  The developers want to store the passwords in such a way that it will thwart brute force attacks. What do? _???_
+ 93. A web site is using a certificate.  Users have recently been receiving errors from the web sit indidcating that the site's certificate is revoked.  Which includes a list of certificates that have been revoked? _???_
+ 94. Give an example of a managment control. _change management_
+ 95. security personnel recently identified potential fraud committed by a network admin. Investigators discovered this admin performs several job functions within the organization, including database administration and app development. How to reduce risk associated with this activity? _???_
+ 96. Security experts want to reduce risks associated with updating critical operating systems.  What meets this goal? _change management_
+ 97. Your company is considering implementing **SSO** capabilities to company applications and linking them to a social media site.  When implemented, users can log onto Facebook and then access company applications without logging on again. What is a potential risk related to this plan? _a data breach exposing passwords on the social media site will affect the company application_
+ 98. You work as a help-desk professional in a large organization.  You have begun to receive an extraordinary number of calls from employees related to malware. What should be your first response. _mitigation_
+ 99. A technician confiscated an employee's computer after management learned the employee had unauthorized material on his system. Later, a security expert captured a forensic image of the system disk. However, the security expert reported the computer was left unattended for several hours before he captured the image. What's a potential issue if this incident goes to court? _chain of custody_
+ 100. Social engineers have launched several successful phone-based attacks against your organization resulting in several data leaks.  What would be effective at reducing the success of these attacks? _???_
+ 
