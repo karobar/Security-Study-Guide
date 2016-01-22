@@ -30,6 +30,7 @@ transmits data in cleartext (unless combined a with encryption protocol)
 ---
 ##### STP (Spanning Tree Protocol)
 prevent switching-loop problems 
+
 ###### RSTP (Rapid STP)
 faster but doesn't authenticate
 
@@ -79,6 +80,7 @@ Protocol used to create passwords that expire after 30 seconds.
 ---
 ##### RADIUS (Remote Authentication Dial-In User Service)
 An AAA (Authentication, Authorization, and Accounting) protocol
+
 ###### 802.1x
  - An 802.1x server is implemented as a RADIUS server
  - An 802.1x server provides port-based authentication
@@ -106,7 +108,7 @@ requires a certificate
 ###### LEAP (Lightweight EAP)
 weaksauce
 
-###### TTLS (Tunneled Transport Layer Security)
+##### TTLS (Tunneled Transport Layer Security)
 
 --- 
 ###### PSK (WPA2-preshared key)
@@ -128,12 +130,14 @@ directioinal antennas
 ###### NIPS (Network IPS)
  - installed on networks
  - can intercept malicious traffic coming into the network
+
 ###### HIPS (Host-Based IPS)
 
 --- 
 # UTM (Unified Threat Management)
 ###### URL filter
 can block access to types of sites
+
 ###### Content/Malware inspection
 don't block access to sites
 
@@ -142,37 +146,50 @@ don't block access to sites
 ###### TLS (Transport Layer Security)
 - Secures transmissions for data in transit
 - Doesn't have a default port, use the port based on what it's encrypting
+
 ###### SSL 
 Doesn't have a default port, use the port based on what it's encrypting
+
 ###### FTPS (File Transfer Protocol Secure)
 uses either SSL or TLS 
+
 ###### HTTPS
 uses SSL or TLS
+
 ###### CCMP (Counter mode cipher block Chaining Message authentication code Protocol)
 provides stronger encryption than TKIP
+
 ###### TKIP (Temporal Key Integrity Protocol)
+
 ###### WEP (Wired Equivalent Privacy)
  - outdated wireless encryption
  - weak IVs (initialization vectors) used for key transmission
  - uses the RC4 stream cipher (which is strong)
+
 ###### WPA & WPA2 (Wi-Fi Protected Access)
 wireless encryption
 
 ---
 # Address Translation
+
 ### Port Address Translation (PAT)
 allows many internal devices to share one public IP
+
 ### Dynamic Network Address Translation (DNAT) 
 uses multiple public IP addresses instead of just one
 
 ---
 # DNS
+
 ###### AAAA Record
 identifies IPv6 address of a given name.
+
 ###### A record
 identifies IPv4 address of a given name. 
+
 ###### MX record
 identifies a mail server
+
 ###### CNAME record
 identifies aliases
 
@@ -207,19 +224,30 @@ Confidentiality | Integrity | Availability
 |steganography|||
 ---
 # Controls
+
 ### Technical Controls
+
 ###### Disk encryption
+
 ### Preventative Controls
 Attempt to prevent incidents
+
 ###### Cable locks
+
 ###### Hardening Systems
  - Makes them more secure than their default configuration, but doesn't protect data after device is lost
  - Disabling unnecessary services
+
 ### Management Controls
+
 ###### Risk assessment 
+
 ### Monitoring Controls
+
 ###### CCTVs
+
 ### Access Controls
+
 ##### ACLs - Access Control List
 Generally take the following format:  
 Permission | Protocol | Source | Destination | Port
@@ -232,34 +260,45 @@ DENY or ALLOW| TCP/UDP/IP, occasionally ICMP |  IP addr (or range,subnet,ANY) | 
       - ports 
  - identify what traffic is allowed or denied
  - can allow incoming and/or outgoing traffic
+
 ###### Implicit Deny
  - Last rule in an ACL
  - Sometimes automatic, sometimes manual
  - May look like "Deny Any Any" or "Deny All All"
+
 ##### Proximity Card
  - won't prevent tailgating
+
 ##### Cipher Lock
  - door access control
  - won't prevent tailgating
+
 #### Access control models
+
 ###### Mandatory Access Control (MAC)
  - uses sensitivity labels and classification levels
  - effective at restricting access on a need-to-know basis
+
 ###### Discretionary Access Control (DAC)
  - specifies that every object has an owner
  - assigns permissions based on object ownership
  - might identify owners in a list
+
 ###### Role-based access control (role-BAC)
  - uses group-based privileges
+
 ###### Rule-base access control (rule-BAC)
  - uses rules that trigger in response to events
 
 ---
 # Sign-On
+
 ### Single Sign-On (SSO)
 Users only have to log on once
+
 ###### SAML
 used with web-based applications
+
 ### Same Sign-On
 Users can access multiple systems using the same credentials, but they have to enter their credentials again each time they access a new resource. 
 
@@ -270,9 +309,11 @@ Something you have | Something you are | Something you know
 |Hardware Tokens<br>Example: RSA tokens<br>uses a one-time password for authentication.| Biometrics | PIN 
 |smart card|fingerprint|password|
 ||retina||
+
 ###### Do Not Require Hardware
  - PIN
  - password
+
 ###### Digital Signature
  - **non-repudiation**
  - integrity
