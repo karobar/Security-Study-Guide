@@ -47,7 +47,7 @@ blocks SYN flood attacks
 # Authentication
 "Something you have" | "Something you are"
 ---|---
-|Hardware Tokens Example:<br>RSA tokens||
-uses a one-time password for authentication.
+|Hardware Tokens<br>Example: RSA tokens<br>uses a one-time password for authentication.||
+
 
 ###### Biometric methods
