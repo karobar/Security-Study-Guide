@@ -83,7 +83,8 @@ An AAA (Authentication, Authorization, and Accounting) protocol
  - An 802.1x server is implemented as a RADIUS server
  - An 802.1x server provides port-based authentication
  - can prevent unauthorized devices from connecting to a network
- - you can configure n 802.1x server with a VLAN to redirect unauthorized devices
+ - you can configure an 802.1x server with a VLAN to redirect unauthorized devices
+ 
 ---
 ###### TACACS+ 
 Proprietary to Cisco
