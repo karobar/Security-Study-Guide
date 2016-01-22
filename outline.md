@@ -97,11 +97,15 @@ Proprietary to Cisco
 ---
 #### EAP-TTLS
  - an 802.1x solution
+
 ##### EAP (Extensible Authentication Protocol)
+
 ###### PEAP (Protected EAP)
 requires a certificate
+
 ###### LEAP (Lightweight EAP)
 weaksauce
+
 ###### TTLS (Tunneled Transport Layer Security)
 
 --- 
