@@ -1,111 +1,96 @@
 # Glossary
 
---- 
 ###### Salting
 a method used to prevent brute force attacks to discover passwords
 
----
+###### SYN
+short for SYNchronize packet, the first step of the three-way handshake
+
 ###### Mantrap
  - highly  effective at preventing unauthorized entry
  - can prevent tailgating.
 
----
+###### Captive Portals
+a portal on some wireless access points which require credentials before access
+
 ###### LDAP (Lightweight Directory Application Protocol)
 
----
 ###### Fuzzing
  - injects random or unexpected data into an application
  - tests the effectiveness of input validation
 
----
 ###### DLP (Data-Loss Prevention) System
  - analyzes network traffic
  - detects if confidential company data is included
  - can limit documents copied to a USB drive using content filters
 
----
 ###### Least Privilege
 ensures users are granted only the access they need to perform their jobs, and no more.
 
----
 ###### IaaS (Infrastructure as a Service)
 a Cloud computing option
 
----
-###### SFTP (Secure Files Transfer Protocol)
+###### SFTP (Secure File Transfer Protocol)
 
----
 ###### TFTP (Trivial File Transfer Protocol)
 
----
 ###### PGP (Pretty Good Privacy) aka GPG (GNU Privacy Guard)
 - primarily used to encrypt mail
 - can also be used to encrypt data at rest
 
---- 
 ###### SMTP (Simple Mail Transfer Protocol)
-transmits data in cleartext (unless combined a with encryption protocol)
+transmits data in cleartext (unless combined a with encryption protocol), usually from server to server
 
----
+
 ##### STP (Spanning Tree Protocol)
 prevent switching-loop problems 
 
 ###### RSTP (Rapid STP)
 faster but doesn't authenticate
 
----
 ###### SSID (Service Set IDentifier)
 
----
 ###### DHCP (Dynamic Host Configuration Protocol)
 
----
 ###### TPM (Trusted Platform Module)
  - included in many new laptops 
  - provides a mechanism for vendors to provide hard drive encryption.
  - doesn't require purchasing additional hardware
 
----
 ###### HSM
  - removable hardware device
  - performs hard drive encryption
 
----
 ###### Flood guards
 Blocks SYN flood attacks
 
---- 
 ###### Anomaly/Heuristic/Behavior-based Detection System
 compare current activity with a baseline
 
----
 ###### Signature-base System
 uses signatures similar to antivirus software
 
----
 ###### Honeypot
 a **server** designed to look valuable to attackers in order to divert attacks
 
----
 ###### PPTP (Point-to-point Tunneling Protocol)
 
---- 
 ###### Honeynet
 a fake network designed to look valuable to attackers in order to divert attacks
 
----
 ###### MAC (Media Access Control) address
 
----
 ###### SCADA (Supervisory Control And Data Acquisition) Network
 
----
 ###### TOTP (Time-based One-Time Password)
 Protocol used to create passwords that expire after 30 seconds.
 
----
 ##### RADIUS (Remote Authentication Dial-In User Service)
 An AAA (Authentication, Authorization, and Accounting) protocol
+
+# Site Survey
+ - Moving a wireless access point around the room
+ - formal and informal flavors
 
 ###### 802.1x
  - An 802.1x server is implemented as a RADIUS server
@@ -113,29 +98,51 @@ An AAA (Authentication, Authorization, and Accounting) protocol
  - can prevent unauthorized devices from connecting to a network
  - you can configure an 802.1x server with a VLAN to redirect unauthorized devices
  
----
 ###### TACACS+ 
 Proprietary to Cisco
 
---- 
 ###### WPS (Wi-Fi Protected Setup)
  - a standard designed to simplify the setup of a wireless network
  - does not implement usernames
 
---- 
 ###### PSK (WPA2-preshared key)
 does not authenticate users based on their usernames
 
---- 
 ###### RDP (Remote Desktop Protocol)
 
----
 ###### Stateless Inspection
 packet filtering
 
----
 ###### Yagi antennas
 directioinal antennas
+
+##### SNMP (Simple Network Management Protocol)
+gathers/pushes configuration parameters from devices on a network
+
+##### POP3 (Post Office Protocol v3)
+only retrieves emails from servers
+by default, sends a signal to server to delete
+
+##### IMAP (Internet Message Access Protocol)
+allows searching of inbox, creation of folders
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ---
 # IPS (Intrusion Prevention System)
@@ -161,8 +168,6 @@ requires a certificate
 ###### LEAP (Lightweight EAP)
 weaksauce
 
-### TTLS (Tunneled Transport Layer Security)
-
 --- 
 # UTM (Unified Threat Management)
 use content filters
@@ -174,31 +179,29 @@ don't block access to sites
 
 ---
 # Encryption
-###### TLS (Transport Layer Security)
+##### TLS (Transport Layer Security)
 - Secures transmissions for data in transit
 - Doesn't have a default port, use the port based on what it's encrypting
+###### TTLS (Tunneled Transport Layer Security)
 
-###### SSL 
+##### SSL 
 Doesn't have a default port, use the port based on what it's encrypting
 
-###### FTPS (File Transfer Protocol Secure)
+##### FTPS (File Transfer Protocol Secure)
 uses either SSL or TLS 
 
-###### HTTPS
+##### HTTPS
 uses SSL or TLS
 
-###### CCMP (Counter mode cipher block Chaining Message authentication code Protocol)
-provides stronger encryption than TKIP
-
-###### TKIP (Temporal Key Integrity Protocol)
-
-###### WEP (Wired Equivalent Privacy)
+##### WEP (Wired Equivalent Privacy)
  - outdated wireless encryption
  - weak IVs (initialization vectors) used for key transmission
- - uses the RC4 stream cipher (which is strong)
+ - uses the RC4 stream cipher, which repeats keys
 
-###### WPA & WPA2 (Wi-Fi Protected Access)
-wireless encryption
+##### WPA & WPA2 (Wi-Fi Protected Access)
+ - wireless encryption
+ - WPA uses **TKIP (Temporal Key Integrity Protocol)**  
+ - WPA2 uses **CCMP (Counter mode cipher block Chaining Message authentication code Protocol)**
 
 ---
 # Address Translation
@@ -229,7 +232,7 @@ identifies aliases
 ID | #
 --- | ---
  HTTP | TCP 80
- HTTPS | 443
+ SSL (and therefore HTTPS, ...) | 443
  DNS | 53
  SSH (and therefore SCP, SFTP...) | TCP 22
  FTPS | 989 or 990
@@ -239,6 +242,10 @@ ID | #
  SMTP | TCP 25
  FTP | TCP 21
  VPN & PPTP | TCP 1723
+ SNMP | 160,161,162
+ POP3 | 110
+ IMAP | 143
+ ICMP | 
  
 ---
 # Protocol IDs
@@ -246,11 +253,12 @@ Protocol | ID
 --- | ---
 IPsec | 50
 
-
  ---
 # Firewalls
  - use ACLs as rules
  - implicit deny
+ - software or hardware
+ - network or host
 
 ---
 # CIA
@@ -260,29 +268,37 @@ Confidentiality | Integrity | Availability
 |encryption|hashes|RAID (Redundant Array of Inexpensive Disks)|
 |access controls|||
 |steganography|||
+
 ---
-# Controls
+# SSL
+security on each end (end-to-end)
 
-### Technical Controls
 
-###### Disk encryption
 
-### Preventative Controls
-Attempt to prevent incidents
 
-###### Cable locks
 
-###### Hardening Systems
- - Makes them more secure than their default configuration, but doesn't protect data after device is lost
- - Disabling unnecessary services
 
-### Management Controls
+---
+# Security Controls
+impementation and enforcement
 
-###### Risk assessment 
+Technical | Management | Operational
+---|---|---
+Encryption | Risk assessment | Procedures
+Passwords | Policies | Standards
+||Privacy Policy|
+||**Acceptable Use Policy**: using resources|
 
-### Monitoring Controls
 
-###### CCTVs
+~~### Preventative Controls~~
+~~Attempt to prevent incidents~~
+~~###### Cable locks~~
+~~###### Hardening Systems~~
+ - ~~Makes them more secure than their default configuration, but doesn't protect data after device is lost~~
+ - ~~Disabling unnecessary services~~
+
+~~### Monitoring Controls~~
+~~###### CCTVs~~
 
 ### Access Controls
 
@@ -323,6 +339,9 @@ DENY or ALLOW| TCP/UDP/IP, occasionally ICMP |  IP addr (or range,subnet,ANY) | 
  - effective at restricting access on a need-to-know basis
 
 ###### Network Access Control (NAC)
+ - dictate a baseline on a _health-check_ server
+ - any system attempting to log on has to meet the baseline (programs, versions, etc.)
+ - can also involve a _remediation_ server to work through issues on the connecting system
 
 ###### Role-based access control (role-BAC)
  - uses group-based privileges
@@ -332,7 +351,6 @@ DENY or ALLOW| TCP/UDP/IP, occasionally ICMP |  IP addr (or range,subnet,ANY) | 
 
 ---
 # Sign-On
-
 ### Single Sign-On (SSO)
 Users only have to log on once
 
@@ -410,5 +428,21 @@ tries to replicate itself
 ###### Armored Virus
 uses techniques to resist reverse engineering
 
-
 ---
+# IPv4
+### Classes 
+determine the class by looking at the first octet
+###### Class A (1-126)
+###### Class B (128-191)
+###### Class C (191-223)
+### Private Addresses
+can only be used within a private network for configuration
+###### Class A (10.0.0.0-10.255.255.255)
+###### Class B (172.16.0.0-172.16.255.255)
+###### Class C (192.168.0.0-192.168.255.255)
+### Reservation
+A set of addresses to request from the DHCP server so that specific hosts can have specific addresses
+### APIPA (Automatic Private IP Addressing)
+ - 169.254.0.1-169.254.255.255
+ - Not internet-routable
+ - assigned if a device can't get an address (or one requested by reservation)
