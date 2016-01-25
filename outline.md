@@ -1,16 +1,35 @@
 # Glossary
----
-###### Tailgating 
-Sneaking in behind somebody else who has access
+
+--- 
+###### Salting
+a method used to prevent brute force attacks to discover passwords
 
 ---
 ###### Mantrap
  - highly  effective at preventing unauthorized entry
- - can prevvent tailgating.
+ - can prevent tailgating.
+
+---
+###### LDAP (Lightweight Directory Application Protocol)
+
+---
+###### Fuzzing
+ - injects random or unexpected data into an application
+ - tests the effectiveness of input validation
+
+---
+###### DLP (Data-Loss Prevention) System
+ - analyzes network traffic
+ - detects if confidential company data is included
+ - can limit documents copied to a USB drive using content filters
 
 ---
 ###### Least Privilege
 ensures users are granted only the access they need to perform their jobs, and no more.
+
+---
+###### IaaS (Infrastructure as a Service)
+a Cloud computing option
 
 ---
 ###### SFTP (Secure Files Transfer Protocol)
@@ -41,6 +60,17 @@ faster but doesn't authenticate
 ###### DHCP (Dynamic Host Configuration Protocol)
 
 ---
+###### TPM (Trusted Platform Module)
+ - included in many new laptops 
+ - provides a mechanism for vendors to provide hard drive encryption.
+ - doesn't require purchasing additional hardware
+
+---
+###### HSM
+ - removable hardware device
+ - performs hard drive encryption
+
+---
 ###### Flood guards
 Blocks SYN flood attacks
 
@@ -65,10 +95,6 @@ a fake network designed to look valuable to attackers in order to divert attacks
 
 ---
 ###### MAC (Media Access Control) address
-
----
-###### Evil Twin
-a rogue access point with the same SSID as an authorized access point
 
 ---
 ###### SCADA (Supervisory Control And Data Acquisition) Network
@@ -96,20 +122,6 @@ Proprietary to Cisco
  - a standard designed to simplify the setup of a wireless network
  - does not implement usernames
 
----
-#### EAP-TTLS
- - an 802.1x solution
-
-##### EAP (Extensible Authentication Protocol)
-
-###### PEAP (Protected EAP)
-requires a certificate
-
-###### LEAP (Lightweight EAP)
-weaksauce
-
-##### TTLS (Tunneled Transport Layer Security)
-
 --- 
 ###### PSK (WPA2-preshared key)
 does not authenticate users based on their usernames
@@ -127,14 +139,33 @@ directioinal antennas
 
 ---
 # IPS (Intrusion Prevention System)
+scans traffic coming into a network to block attacks
 ###### NIPS (Network IPS)
  - installed on networks
  - can intercept malicious traffic coming into the network
 
 ###### HIPS (Host-Based IPS)
 
+# IDS (Intrusion Detection System)
+###### NIDS (Network IDS)
+
+---
+# EAP-TTLS
+ - an 802.1x solution
+
+### EAP (Extensible Authentication Protocol)
+
+###### PEAP (Protected EAP)
+requires a certificate
+
+###### LEAP (Lightweight EAP)
+weaksauce
+
+### TTLS (Tunneled Transport Layer Security)
+
 --- 
 # UTM (Unified Threat Management)
+use content filters
 ###### URL filter
 can block access to types of sites
 
@@ -207,8 +238,14 @@ ID | #
  Telnet | TCP 23
  SMTP | TCP 25
  FTP | TCP 21
+ VPN & PPTP | TCP 1723
  
 ---
+# Protocol IDs
+Protocol | ID
+--- | ---
+IPsec | 50
+
 
  ---
 # Firewalls
@@ -276,14 +313,16 @@ DENY or ALLOW| TCP/UDP/IP, occasionally ICMP |  IP addr (or range,subnet,ANY) | 
 
 #### Access control models
 
-###### Mandatory Access Control (MAC)
- - uses sensitivity labels and classification levels
- - effective at restricting access on a need-to-know basis
-
 ###### Discretionary Access Control (DAC)
  - specifies that every object has an owner
  - assigns permissions based on object ownership
  - might identify owners in a list
+
+###### Mandatory Access Control (MAC)
+ - uses sensitivity labels and classification levels
+ - effective at restricting access on a need-to-know basis
+
+###### Network Access Control (NAC)
 
 ###### Role-based access control (role-BAC)
  - uses group-based privileges
@@ -318,5 +357,58 @@ Something you have | Something you are | Something you know
 ###### Digital Signature
  - **non-repudiation**
  - integrity
+
+---
+# Attacks
+##### Tailgating 
+Sneaking in behind somebody else who has access
+
+##### VM escape 
+runs on VM, allows the attacker to control a physical host server
+
+##### Evil Twin
+a rogue access point with the same SSID as an authorized access point
+
+##### Logic Bomb
+code that exectes in respose to an event
+
+##### Rootkit
+includes hidden processes
+
+##### Trojan
+looks beneficial but includes a malicious componenet
+
+##### Phishing
+ - sends unwanted email to users
+ - cannot be prevented with input validation
+###### Whaling
+a phishing attack which targets  executives
+
+##### XSRF (cross-Site Request Forgery)
+
+##### XSS (cross-site scripting)
+inserting HTML or JavaScript code into a web site or email
+
+##### LDAP injection
+injecting LDAP commands to query a directory service database
+
+##### Buffer Overflow
+sends more data or unexpeceted data
+
+##### Pharming attack
+attempts to redirect users from one web site to another web site
+
+### DoS (Denial of Service)
+###### SYN flood
+###### DDos (Distributed DoS)
+###### Smurf Attack
+doesn't attempt to  connect to systems but instead sends pings
+
+### Virus
+tries to replicate itself
+
+###### Armored Virus
+uses techniques to resist reverse engineering
+
 
 ---
