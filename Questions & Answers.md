@@ -47,7 +47,7 @@
 After saving these settings, an employee reports that he cannot access the wireless network anymore.  Why? _Hardware/MAC address filtering_
  39. Homer recently implemented a wireless network in his home using WEP. He asks for advice. What do? _He should not use WEP because it is a weak encryption algorithm_
  40. What is an example of an attack against a mobile device? _**Bluejacking is the practice of sending unsolicited messages to other Bluetooth devices**_
- 41. A network administrator needs to open a port on a firewall to support a VPN using PPTP. What port? _???_
+ 41. A network administrator needs to open a port on a firewall to support a VPN using PPTP. What port? _**a VPN using PPTP requires TCP port 1723**_
  42. Attackers recently attacked a web server hosted by your organization.  Management has tasked admins with reducing the attack surface of this server to prevent future attacks.  What do? _Disabling unnecessary services_
  43. Network admins identified what appears to be malicious traffic from an internal computer, but only when nobody is logged onto the computer.  You suspect the system is infected with malware.  It periodically runs an application that attempts to connect to web sites over port 80 with Telnet.  After comparing the computer with a list of services from the standard image, you verify this application is very likely the problem. What process allowed you to make this determination? _Baselining_
  44. An updated security policy defines what applications users can install and run on company-issued mobile devices.  Which control enforces this policy? _Whitelisting_
@@ -59,26 +59,24 @@ After saving these settings, an employee reports that he cannot access the wirel
  50. You want to deter an attacker from using brute force to gain access to a mobile device. What do? _Account lockout settings_
  51. Management is considering allowing users to connect to the corporate network with their own devices. What represents a security concern? _Inability to ensure devices are up to date with current system patches_
  52. Your organization is planning to issue mobile devices to some employees, but they are concerned about protecting the confidentiality of data if the devices are lost or stolen.  Which is the best way to secure data at rest on a mobile device? _Full device encryption_
- 53. Your organization recently purchased several new laptops for employees.  You're asked to encrypt the laptop's hard drives without purchasing additional hardware. What do you use? _???_
- 54. Management within your organization wants to limit documents copied to USB flash drives.  What can be used to meet this goal? _???_
+ 53. Your organization recently purchased several new laptops for employees.  You're asked to encrypt the laptop's hard drives without purchasing additional hardware. What do you use? _**A TPM is included in many new laptops and it provides a mechanism for vendors to perform hard drive encryption**_
+ 54. Management within your organization wants to limit documents copied to USB flash drives.  What can be used to meet this goal? _**A DLP solution can limit documents copied to a USB drive using content filters**_
  55. You installed code designed to enable your account automatically, three days after anyone disables it.  What does this describe? _Logic bomb_
  56. Lisa recently completed an application used by the Personnel dept. to store PII and other employee info.  She programmed in the ability to access this application with credentials that only she knows, so that she can perform remote maintenance on the application if necessary. What does this describe? _backdoor_
  57. A recent change in an organization's security policy states that monitors need to be positioned so that they cannot be viewed from outside any windows. Why? _reduce success of shoulder surfing_
  58. You are troubleshooting an intermittent connectivity issue with a web server. After examining the logs, you identify repeated connection attempts from various IP addresses.  You realize these connection attempts are overloading the server, preventing it from responding to other connections.  What's happening? _DDoS attack_
- 59. Your organization includes the following statement in the security policy: 
- >"Security controls need to protect against both online and offline password brute force attacks."       
-
-What is least helpful to meet these goals? _Password complexity_
- 60. A code review of a web application discovered that the application is not performing boundary checking.  What should the web developer add to theis application to resolve this issue? _???_
- 61. A web developer is using methods to validate user input in a web site application.  WHich attack isn't prevented by validating user input? _???_  62. Checking the logs of a web server, you see the following entry:
+ 59. Security controls need to protect against both online and offline password brute force attacks. What is least helpful to meet these goals? _~~Password complexity~~**Account expiration**_
+ 60. A code review of a web application discovered that the application is not performing boundary checking.  What should the web developer add to theis application to resolve this issue? _**The lack of input validation is a common coding error and it includes boundary or limit checking to validate data before using it.**_
+ 61. A web developer is using methods to validate user input in a web site application.  WHich attack isn't prevented by validating user input? _**Whaling**_  
+ 62. Checking the logs of a web server, you see the following entry:
      
          198.252.69.169--[1/Sep/2013:05:20]"GET/index.php?username=ZZZZZZZZZZZZZZZZZZZZZZZBBBBBBBBCCCCCCCHTTP/1.1" "http://gcgapremiu.com/security/" "Chrome31"
 What's going on here? _a buffer overflow attack_
  63. Looking a logs for an online web app, you see that someone has entered the following prhase into several queries:
      ' or '1'='1' -- 
-    What's going on here _An XSS attack_
- 64. A security tester is using **fuzzing** techniques to test an app. What does fuzzing use to test the app? _???_
- 65. An organization has purchased fire insurance to manage the risk of a potential fire. What method are they using? _Risk acceptance_
+    What's going on here _~~An XSS attack~~**SQL injection**_
+ 64. A security tester is using fuzzing techniques to test an app. What does fuzzing use to test the app? _**Fuzzing sends random or unexpected input into an application to test the application's ability to handle it**_
+ 65. An organization has purchased fire insurance to manage the risk of a potential fire. What method are they using? _Risk ~~acceptance~~**transferrence**_
  66. You are asked to identify the number of times a specific type of incident occurs per year. What is another name for this? _???_
  67. Lisa needs to calculate the total ALE for a group of servers used in the network.  During the past two years, five of the servers failed.  The hardware cost to replace each server $3,500, and the downtime has resulted in $2,500 of additional losses. What's the ALE? _???_
  68. Security experts at your organization have determined that your network has been repeatedly attacked from multiple entities in a foreign country.  Research indicates these are coordinated and sophisticated attacks.  What's going on? _advanced persistent threat_
