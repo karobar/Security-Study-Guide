@@ -1,14 +1,66 @@
 # Glossary
 
+###### BCP (Business Continuity Plan)
+often contains a succession planning chart
+
+###### ESD (ElectroStatic Discharge)
+
+
+
+###### DRP (Disaster Recovery Plan)
+
+###### AUP (Acceptable Use Policy)
+
+###### SAML (Security Assertion Markup Language)
+an XML-based data format
+used for SSO on web browsers
+
+###### 3DES (Triple Data Encryption Standard)
+weaker than AES
+
+
+
+
+###### PKI (Public Key Infrastructure)
+
+###### PBKDF2 (password Based Key Derivation Function 2)
+key stretching technique designed to protect against brute force attempts 
+salts the password with additional bits
+an alternative is _bcrypt_
+
+###### CRL (Certification Revocation List) 
+a list of certificates that a Certificate Authority (CA) has revoked
+
+###### Sniffing
+The practice of capturing traffic with a protocol analyzer. 
+
 ###### Salting
 a method used to prevent brute force attacks to discover passwords
+
+###### Failover cluster
+provides fault tolerance for servers 
+can increase data availability
+expensive
+
+
+
+###### UPS (Uninterruptible Power Supply)
+
+###### Onboarding/Offboarding business partners
+bring new/returning people up to speed on policies
 
 ###### SYN
 short for SYNchronize packet, the first step of the three-way handshake
 
+###### Orphan VM
+VM without updates
+
 ###### Mantrap
  - highly  effective at preventing unauthorized entry
  - can prevent tailgating.
+
+# SSL
+security on each end (end-to-end)
 
 ###### Captive Portals
 a portal on some wireless access points which require credentials before access
@@ -19,13 +71,16 @@ a portal on some wireless access points which require credentials before access
  - injects random or unexpected data into an application
  - tests the effectiveness of input validation
 
+###### RTO (Recovery Time Objective)
+measure of time it takes to recover a resource
+
+###### RPO (Recovery Point Objective)
+point in time where you recover to
+
 ###### DLP (Data-Loss Prevention) System
  - analyzes network traffic
  - detects if confidential company data is included
  - can limit documents copied to a USB drive using content filters
-
-###### Least Privilege
-ensures users are granted only the access they need to perform their jobs, and no more.
 
 ###### IaaS (Infrastructure as a Service)
 a Cloud computing option
@@ -42,11 +97,6 @@ a Cloud computing option
 transmits data in cleartext (unless combined a with encryption protocol), usually from server to server
 
 
-##### STP (Spanning Tree Protocol)
-prevent switching-loop problems 
-
-###### RSTP (Rapid STP)
-faster but doesn't authenticate
 
 ###### SSID (Service Set IDentifier)
 
@@ -139,10 +189,28 @@ allows searching of inbox, creation of folders
 
 
 
+---
+# MAC (Message Authentication Code)
+provides integrity similar to how a hash is used
+###### HMAC (Hash-based Message Authentication Code)
+hashing algorithm used with IPsec
+RFC 4835 mandates the use of HMAC for authenticity and integrity
+
+---
+# Certificates
+###### OCPS (Online Certificate Status Protocol)
+validates trust with certificates
+only returns short responses such as good, unknown, or revoked
+###### CSR (Certificate Signing Request)
 
 
-
-
+---
+# Ciphers
+### Block Cipher
+encrypts data in specific-sized blocks, such as 64/128-bit blocks
+###### AES (Advanced Encryption Standard)
+###### DES (Data Encryption Standard)
+###### MD5 (Message Digest 5)
 
 ---
 # IPS (Intrusion Prevention System)
@@ -178,30 +246,7 @@ can block access to types of sites
 don't block access to sites
 
 ---
-# Encryption
-##### TLS (Transport Layer Security)
-- Secures transmissions for data in transit
-- Doesn't have a default port, use the port based on what it's encrypting
-###### TTLS (Tunneled Transport Layer Security)
 
-##### SSL 
-Doesn't have a default port, use the port based on what it's encrypting
-
-##### FTPS (File Transfer Protocol Secure)
-uses either SSL or TLS 
-
-##### HTTPS
-uses SSL or TLS
-
-##### WEP (Wired Equivalent Privacy)
- - outdated wireless encryption
- - weak IVs (initialization vectors) used for key transmission
- - uses the RC4 stream cipher, which repeats keys
-
-##### WPA & WPA2 (Wi-Fi Protected Access)
- - wireless encryption
- - WPA uses **TKIP (Temporal Key Integrity Protocol)**  
- - WPA2 uses **CCMP (Counter mode cipher block Chaining Message authentication code Protocol)**
 
 ---
 # Address Translation
@@ -264,44 +309,44 @@ IPsec | 50
 # CIA
 Confidentiality | Integrity | Availability
 ---|---|---
-| protecting/securing data | ensure systems are not susceptible to unauthorized changes. | ensure critical systems provide uninterrupted service 
-|encryption|hashes|RAID (Redundant Array of Inexpensive Disks)|
+|Prevents the unauthorized disclosure of data| ensure systems/data are not susceptible to unauthorized changes.
+| _authorized personnel_ **can** access the data | hashes | ensure critical systems provide uninterrupted service 
+_unauthorized personnel_ **cannot** access the data| Message Authentication Code (MAC)|
+|encryption||RAID (Redundant Array of Inexpensive Disks)|
 |access controls|||
 |steganography|||
 
----
-# SSL
-security on each end (end-to-end)
+## Confidentiality
+### Encryption
+##### TLS (Transport Layer Security)
+- Secures transmissions for data in transit
+- Doesn't have a default port, use the port based on what it's encrypting
+###### TTLS (Tunneled Transport Layer Security)
 
+##### SSL 
+Doesn't have a default port, use the port based on what it's encrypting
 
+##### FTPS (File Transfer Protocol Secure)
+uses either SSL or TLS 
 
+##### HTTPS
+uses SSL or TLS
 
+##### WEP (Wired Equivalent Privacy)
+ - outdated wireless encryption
+ - weak IVs (initialization vectors) used for key transmission
+ - uses the RC4 stream cipher, which repeats keys
 
+##### WPA & WPA2 (Wi-Fi Protected Access)
+ - wireless encryption
+ - WPA uses **TKIP (Temporal Key Integrity Protocol)**  
+ - WPA2 uses **CCMP (Counter mode cipher block Chaining Message authentication code Protocol)**
 
----
-# Security Controls
-impementation and enforcement
-
-Technical | Management | Operational
+## Access Controls
+Ensure that only authorized personnel can access data.   
+Identification|Authentication|Authorization
 ---|---|---
-Encryption | Risk assessment | Procedures
-Passwords | Policies | Standards
-||Privacy Policy|
-||**Acceptable Use Policy**: using resources|
-
-
-~~### Preventative Controls~~
-~~Attempt to prevent incidents~~
-~~###### Cable locks~~
-~~###### Hardening Systems~~
- - ~~Makes them more secure than their default configuration, but doesn't protect data after device is lost~~
- - ~~Disabling unnecessary services~~
-
-~~### Monitoring Controls~~
-~~###### CCTVs~~
-
-### Access Controls
-
+Users claim an identity (i.e. with a username) | users prove their identity (i.e. with a password) | grant or restrict access to resources (i.e. permissions)
 ##### ACLs - Access Control List
 Generally take the following format:  
 Permission | Protocol | Source | Destination | Port
@@ -337,6 +382,7 @@ DENY or ALLOW| TCP/UDP/IP, occasionally ICMP |  IP addr (or range,subnet,ANY) | 
 ###### Mandatory Access Control (MAC)
  - uses sensitivity labels and classification levels
  - effective at restricting access on a need-to-know basis
+ - strongest access control method available
 
 ###### Network Access Control (NAC)
  - dictate a baseline on a _health-check_ server
@@ -345,18 +391,45 @@ DENY or ALLOW| TCP/UDP/IP, occasionally ICMP |  IP addr (or range,subnet,ANY) | 
 
 ###### Role-based access control (role-BAC)
  - uses group-based privileges
-
 ###### Rule-base access control (rule-BAC)
  - uses rules that trigger in response to events
+
+## Hashing
+###### SHA-1 (Secure Hash Algorithm 1)
+
+
+---
+# Security Controls
+impementation and enforcement
+
+Technical | Management | Operational
+---|---|---
+Encryption | Risk assessment | Procedures
+Passwords | Policies | Standards
+|smart cards|Privacy Policy| Change Management
+|least privilege|Acceptable Use Policy: _using resources_|
+||Security Policy: _password length, etc_|
+||Mandatory Vacations|
+||Job Rotation|
+||Separation of duties|
+||Least Privilege: _ensures users are granted only the access they need to perform their jobs, and no more_
+
+Deterrent | Preventative | Detective | Compensating 
+---|---|---|---
+||Cable locks||original control is too expensive
+||Hardening: _disabling unnecessary services_||
+
+~~### Monitoring Controls~~
+~~###### CCTVs~~
+
+
 
 ---
 # Sign-On
 ### Single Sign-On (SSO)
 Users only have to log on once
-
 ###### SAML
 used with web-based applications
-
 ### Same Sign-On
 Users can access multiple systems using the same credentials, but they have to enter their credentials again each time they access a new resource. 
 
@@ -382,7 +455,7 @@ Something you have | Something you are | Something you know
 Sneaking in behind somebody else who has access
 
 ##### VM escape 
-runs on VM, allows the attacker to control a physical host server
+runs on VM, allows the attacker to control a hypervisor and attack other VMs or the physical host
 
 ##### Evil Twin
 a rogue access point with the same SSID as an authorized access point
@@ -401,6 +474,8 @@ looks beneficial but includes a malicious componenet
  - cannot be prevented with input validation
 ###### Whaling
 a phishing attack which targets  executives
+###### Spear phishing
+a targeted phishing attack
 
 ##### XSRF (cross-Site Request Forgery)
 
@@ -446,3 +521,43 @@ A set of addresses to request from the DHCP server so that specific hosts can ha
  - 169.254.0.1-169.254.255.255
  - Not internet-routable
  - assigned if a device can't get an address (or one requested by reservation)
+
+---
+# Risk
+### Risk Calculations
+###### MTTR (Mean Time to Repair)
+ - time it takes to fix a device
+ - given by manufacturer
+###### MTBF (Mean Time Between Failure)
+ - how long you can use a device before it fails
+ - given by manufacturer
+###### MTTF (Mean Time to Failure)
+for devices you don't plan to replace
+###### ALE (Annualized Loss Expectancy)
+If an incident were to happen, how much do you expect to lose per year. ALE = SLE X ARO
+###### SLE (Single Loss Expectancy)
+If a single vulnerability were exploited, what could be lost. SLE = ALE / ARO
+###### ARO (Annualized Rate of Occurence)
+How many times a threat could compromise a vulnerability. ARO = ALE / SLE
+
+### Risk Response
+###### Mitigate 
+###### Transfer
+###### Avoidance
+###### Deterrence
+###### Acceptance
+
+---
+##### STP (Spanning Tree Protocol)
+prevent switching-loop problems 
+
+###### RSTP (Rapid STP)
+faster but doesn't authenticate
+
+---
+###### Response Process
+1. Incident Preparation
+2. <INCIDENT!>
+3. Incident Identification
+4. Escalation and Notification
+5. Incident Mitigation 
