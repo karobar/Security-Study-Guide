@@ -18,4 +18,5 @@
 16. When you log onto your bank account, you are able to access a partner's credit card site, check-ordering services, and a mortgage site without entering your credentials again. What is this called? _SSO_
 17. Your organization recently made an agreement with third parties for the exchange of authentication and authorization information. The solution uses an XML-based open standard. What's the solution being implemented? _SAML_
 18. What provides authentication services and uses PPP? _PAP and CHAP_
-19. Users in your organization access your network from remote locations, Currently, the re
+19. Users in your organization access your network from remote locations, Currently, the RAS is RADIUS. But, the organization wants to implement a stronger authentication service that supports EAP. What do? _Diameter_
+20. Give two examples of things which provide authentication services for remote users and devices. _**Both RADIUS and Diameter are authentication services for remote users and devices**_
