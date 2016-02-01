@@ -49,6 +49,7 @@ Users claim an identity (i.e. with a username) | users prove their identity (i.e
 ||**somewhere you are** (geolocation)
 ||**something you do** (touch screen gestures, behavioral biometrics, keystroke dynamics)
 ||Kerberos
+||LDAP
 
 ##### Identity Proofing
  - the process of verifying that people are who they claim to be prior to issuing them credentials, or if they lose their credentials
@@ -61,7 +62,6 @@ Users claim an identity (i.e. with a username) | users prove their identity (i.e
 ##### Cipher Lock
  - door access control
  - won't prevent tailgating
-
 
 ### Authentication
 ###### Do Not Require Hardware
@@ -106,6 +106,18 @@ Users claim an identity (i.e. with a username) | users prove their identity (i.e
 
 **Same Sign-On:** Users can access multiple systems using the same credentials, but they have to enter their credentials again each time they access a new resource. 
 
+###### Authenticating RAS (Remote Access Service) Clients
+ - provide access to a network from an outside source
+ - Multiple Methods:
+   - **Password Authentication Protocol (PAP)**: sends passwrds in cleartext, so is susceptible to sniffing. uses PPP
+   - **Challenge Handshake Authentication Protocol (CHAP):** Server challenges client for authentication information. uses PPP.
+   - **Microsoft CHAP (MS-CHAP)**
+   - **MS-CHAPv2**
+   - **RADIUS (Remote Authentication Dial-In User Service):** provides a centralized method of authentication for multiple remote access servers. Encrypts password packets.
+   - **Diameter:** an improvement over RADIUS. Supports Extensible Authentication Protocol (EAP).
+   - **XTACACS (Extended Terminal Access Controller Access-Control System):** proprietary Cisco. Improvement over TACACS.
+   - **TACACS+ (Terminal Access Controller Access-Control System Plus):** alternative to RADIUS. Proprietary Cisco. Can interact with Kerberos. encrypts the entire process
+
 ##### Something you have
 ###### Smart Cards
  - credit card-sized cards that have an embedded microchip and a certificate
@@ -134,27 +146,6 @@ Users claim an identity (i.e. with a username) | users prove their identity (i.e
 Errors: 
   - **False acceptance:** incorrectly identifies an _unauthorized_ user as an _authorized_ user. **FAR** (False Acceptance Rate/Type 2 error)
   - **False rejection:** **FRR/type 1 error**
-
-#### Access control models
-###### Discretionary Access Control (DAC)
- - specifies that every object has an owner
- - assigns permissions based on object ownership
- - might identify owners in a list
-
-###### Mandatory Access Control (MAC)
- - uses sensitivity labels and classification levels
- - effective at restricting access on a need-to-know basis
- - strongest access control method available
-
-###### Network Access Control (NAC)
- - dictate a baseline on a _health-check_ server
- - any system attempting to log on has to meet the baseline (programs, versions, etc.)
- - can also involve a _remediation_ server to work through issues on the connecting system
-
-###### Role-based access control (role-BAC)
- - uses group-based privileges
-###### Rule-base access control (rule-BAC)
- - uses rules that trigger in response to events
 
 # Integrity
 #### Hashing
