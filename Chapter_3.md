@@ -48,19 +48,30 @@ DoS attack favorite
 
 # Encryption Protocols
 ###### SSH
-can encrypt 'TCP Wrappers', a type of ACL used on Linux and Unix to filter traffic
+can encrypt:
+ - 'TCP Wrappers', a type of ACL used on Linux and Unix to filter traffic
+ - SFTP traffic
+ - SCP traffic
+
+###### FTPS
+###### SFTP
 ###### SCP
-###### SSL
-Can encrypt all sorts of traffic, like HTTP,SMTP,and LDAP
-###### TLS
-Replacement for SSL
+###### SSL & TLS
+ - TLS is a replacement for SSL
+ - can encrypt other protocols like HTTPS, SMTP, and LDAP
+
 ###### IPsec
  - encapsulates and encrypts IP packets
  - native to IPv6, but works with IPv4
- - uses _Tunnel Mode_ to protect VPN traffic
+ - Two modes: **Tunnel** and **Transport**
+   - Tunnel Mode encrypts entire IP packets, and is used in VPNs
+   - Transport mode only encrypts the payload, used in private networks
  - Two main components:
    - Authentication Header (AH)
    - Encapsulating Security Payload (ESP)
+ - provides authentication and encryption
+ - uses IKE (Internet Key Exchange) to authenticate clients
+   - creates security associations for the VP and then uses those associations to set up a secure channel between the client and the VPN server 
 
 ---
 # Application Protocols
@@ -186,8 +197,22 @@ uses multiple public IP addresses instead of just one
 
 ---
 # UTM (Unified Threat Management)
-use content filters
 ###### URL filter
 can block access to types of sites
 ###### Content/Malware inspection
 don't block access to sites
+###### Web Security Gateway
+ - a type of UTM that can protect against multiple threats, including email attachments, embedded code in web pages, and spam
+ - Strength in content filtering
+
+---
+# OSI model
+Name|Devices|Protocols
+---|---|---
+physical | cables **hubs** | Ethernet, cable protocols
+Data link| Switches | MAC, **ARP, NDP, VLANs**
+Network | Routers, **Layer 3 Switches**| IP, **IPsec, ICMP** |
+Transport||TCP,UDP| 
+Session||
+Presentation||
+Application|Proxies, application-proxy firewalls, web app firewalls, web security gateways, UTM security appliances | **DNS, FTP, FTPS**, HTTP, HTTPS, **LDAP, POP3, RDP, SCP, SFTP, SMTP, SNMP, SSH, Telnet, and TFTP**
