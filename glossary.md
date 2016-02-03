@@ -49,21 +49,6 @@ short for SYNchronize packet, the first step of the three-way handshake
 ###### Orphan VM
 VM without updates
 
-###### Mantrap
- - highly  effective at preventing unauthorized entry
- - can prevent tailgating.
-
-###### SSL
-security on each end (end-to-end)
-
-###### Captive Portals
-a portal on some wireless access points which require credentials before access
-
-
-###### Fuzzing
- - injects random or unexpected data into an application
- - tests the effectiveness of input validation
-
 ###### RTO (Recovery Time Objective)
 measure of time it takes to recover a resource
 
@@ -78,18 +63,12 @@ point in time where you recover to
 ###### IaaS (Infrastructure as a Service)
 a Cloud computing option
 
-###### SFTP (Secure File Transfer Protocol)
-
-###### TFTP (Trivial File Transfer Protocol)
-
 ###### PGP (Pretty Good Privacy) aka GPG (GNU Privacy Guard)
 - primarily used to encrypt mail
 - can also be used to encrypt data at rest
 
 ###### SMTP (Simple Mail Transfer Protocol)
 transmits data in cleartext (unless combined a with encryption protocol), usually from server to server
-
-
 
 ###### SSID (Service Set IDentifier)
 
@@ -113,44 +92,18 @@ compare current activity with a baseline
 ###### Signature-base System
 uses signatures similar to antivirus software
 
-###### PPP (Point-To-Point)
-
-###### Honeypot
-a **server** designed to look valuable to attackers in order to divert attacks
-
 ###### PPTP (Point-to-point Tunneling Protocol)
-
-###### Honeynet
-a fake network designed to look valuable to attackers in order to divert attacks
-
-###### MAC (Media Access Control) address
 
 ###### SCADA (Supervisory Control And Data Acquisition) Network
 
 ##### RADIUS (Remote Authentication Dial-In User Service)
 An AAA (Authentication, Authorization, and Accounting) protocol
-
-# Site Survey
- - Moving a wireless access point around the room
- - formal and informal flavors
-
-###### 802.1x
- - An 802.1x server is implemented as a RADIUS server
- - An 802.1x server provides port-based authentication
- - can prevent unauthorized devices from connecting to a network
- - you can configure an 802.1x server with a VLAN to redirect unauthorized devices
  
 ###### TACACS+ 
 Proprietary to Cisco
 
-###### WPS (Wi-Fi Protected Setup)
- - a standard designed to simplify the setup of a wireless network
- - does not implement usernames
-
 ###### PSK (WPA2-preshared key)
 does not authenticate users based on their usernames
-
-###### RDP (Remote Desktop Protocol)
 
 ###### Stateless Inspection
 packet filtering
