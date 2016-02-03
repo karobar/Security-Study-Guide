@@ -18,11 +18,6 @@ there are _objects_, such as files, folders, shares, and printers, and _subjects
  - admins assign labels to _subjects_ and _objects_; when these match, the subject is granted access
  - Example: Top Secret, Secret, Confidential
 
-### Network Access Control (NAC)
- - dictate a baseline on a _health-check_ server
- - any system attempting to log on has to meet the baseline (programs, versions, etc.)
- - can also involve a _remediation_ server to work through issues on the connecting system
-
 ### Role-based access control (role-BAC/RBAC)
 uses group-based privileges
 
