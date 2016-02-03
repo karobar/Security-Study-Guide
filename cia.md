@@ -14,20 +14,22 @@ _unauthorized personnel_ **cannot** access the data| Message Authentication Code
 
 # Confidentiality
 ### Encryption
-##### TLS (Transport Layer Security)
+#### TLS (Transport Layer Security)
 - Secures transmissions for data in transit
 - Doesn't have a default port, use the port based on what it's encrypting
+
 ###### TTLS (Tunneled Transport Layer Security)
 
-##### SSL 
+#### SSL 
 Doesn't have a default port, use the port based on what it's encrypting
 
-##### FTPS (File Transfer Protocol Secure)
+#### FTPS (File Transfer Protocol Secure)
 uses either SSL or TLS 
 
-##### HTTPS
+#### HTTPS
 uses SSL or TLS
 
+#### Wireless Encryption
 ##### WEP (Wired Equivalent Privacy)
  - outdated wireless encryption
  - weak IVs (initialization vectors) used for key transmission
@@ -35,8 +37,28 @@ uses SSL or TLS
 
 ##### WPA & WPA2 (Wi-Fi Protected Access)
  - wireless encryption
- - WPA uses **TKIP (Temporal Key Integrity Protocol)**  
+ - can operate in either **Personal** or **Enterprise** modes
+   - when using personal mode, users access the wireless network anonymously with a PSK or passphrase. also known as WPA-PSK or WPA2-PSK
+   - when using enterprise mode, users must authenticate with unique credentials before access to the wireless network. Uses an 802.1x server.
+ - WPA 
+     - uses **TKIP (Temporal Key Integrity Protocol)**.
+        - encrypts each packet with a new key  
+     - When first released, WPA used RC4 (Rivest Cipher 4) stream encryption with TKIP
  - WPA2 uses **CCMP (Counter mode cipher block Chaining Message authentication code Protocol)**
+
+###### WPA Cracking Attacks
+1. Use a wireless sniffer to capture packets
+2. Wait for a wireless client to authenticate.
+3. Once you have the encrypted passphrase from the four-way handshake, they can launch a brute-force attack
+
+##### IVs (Initialization Vectors)
+ - the encryption keys used in WEP are derived from the WEB key entered into the WEP and the wireless devices
+ - WEP then uses an initialization vector (IV) to create the kys used for RC4.
+   - An IV is a 24-bit number 
+ - WEP combines a password with an IV to create a key, and then encrypts the packet with this key
+
+###### IV attack
+the attacker uses packet injection techniques to add additional packets into the data stream. The WAP responds with more packets, which increases the probability that it will reuse a key. 
 
 ## Access Controls
 Ensure that only authorized personnel can access data.   
