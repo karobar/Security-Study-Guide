@@ -20,6 +20,7 @@ looks beneficial but includes a malicious componenet
 ##### Phishing
  - sends unwanted email to users
  - cannot be prevented with input validation
+
 ###### Whaling
 a phishing attack which targets  executives
 ###### Spear phishing
@@ -45,6 +46,20 @@ attempts to redirect users from one web site to another web site
 ###### DDos (Distributed DoS)
 ###### Smurf Attack
 doesn't attempt to  connect to systems but instead sends pings
+###### MAC Flood
+flood a swich with tons of Ethernet frames, consuming the memory of the switch and forcing out legitimate entries on the switch's address table. Effectively turns a switch into a hub
+
+### Worms
+###### Stuxnet
+ - a worm designed to attack a specific embedded system
+ - used in one of Iran's nuclear enrichment facilities, causing centrifuges to spin fast enough to tear themselves apart
+ - Process:
+     1. **Infect:** Windows systems were infected through USB drives
+     2. **Search:** look through the network for a specific system
+     3. **Update:** download an updated version of the worm
+     4. **Compromise:** use zero-day vulnerabilities
+     5. **Control:** control the system and send commands as desired
+     6. **Deceive and destroy:** Send false data to monitors indicating everything is fine
 
 ### Virus
 tries to replicate itself
