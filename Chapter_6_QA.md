@@ -1,1 +1,20 @@
-
+1. What's a type of malware difficult to reverse-engineer? _Armored Virus_
+2. Recently, malware on a company computer destroyed several important files after it detected that Homer was no longer employed at the company. What's the malware? _Logic Bomb_
+3. A recent antivirus scan on a server detected a Trojan. A technician removed the Trojan, but a security admin expressed concerns that unauthorized personnel might be able to access data on the server. The security admin decided to check the server further. What's the admin most likely looking for? _Backdoor_
+4. After Maggie turned on her computer, she saw a message indicating that unless she made a payment, her hard drive would be formatted. What's this? _Ransomware_
+5. A security admin recently noticed abnormal activity on a workstation.  It is connecting to computers outside the organizations's internal network, using uncommon ports. Using a security toolkit, the admin discovered that the computer is also running several hidden processes. What has the admin found? _Rootkit_
+6. What type of malware uses marketing pop-ups and doesn't attempt to hide itself? _Adware_
+7. What is a malware type likely to monitor a user's computer? _Spyware_
+8. Lisa is a database admin and received a phone call from someone identifying himself as a technician working with a known hardware vendor. The technician said he's aware of a problem with database servers they've sold but it only affects certain OS versions. He asks Lisa what OS the company is running on its database servers. What's the best response from Lisa? _Thank the caller and end the call, report the call to her supervisor, and independently check the vendor for issues_
+9. A security admin at a shopping mall discovered two wireless cameras pointing at an ATM. These cameras were not installed by mall personnel and are not authorized. What's the goal of these cameras? _Shoulder Surfing_
+10. Bart is in a break area outside the office. He told Lisa that he forgot his badge inside and asked Lisa to let him follow her when she goes back inside. What's going on? _Tailgating_
+11. An organization's security policy requires employees to incinerate paper documents. What's likely to be prevented? _Dumpster diving_
+12. While cleaning out his desk, Bart threw several papers containing PII into the recycle bin. What attack can exploit this action? _Dumpster diving_
+13. Marge reports that she keeps receiving unwanted emails about personal loans. What does this describe? _Spam_
+14. A recent spear phishing attack that appeared to come from your organization's CEO resulted in several employees revealing their passwords to attackers. Management wants to implement a security control to provide assurances to employees that email that appears to come from the CEO actually came from the CEO. What should be implemented? _Digital signatures_
+15. Attackers are targeting C-level executives in your organization. What type of attack is this? _Whaling_
+16. You manage a group of computers in an isolated network without Internet access. You need to update the antivirus definitions manually on these computers. What's your most important concern? _**When downloading files as important as antivirus definitions, it's important to ensure they do not lose data integrity, and you can do so by verifying the hashes**_
+17. A user wants to reduce the threat of an attacker capturing her personal information while she surfs the Internet. What do? _**Anti-spyware is the best choice to protect PII while online**_
+18. Bart is complaining that new browser windows keep opening on his computer. What do? _Pop-up blocker_
+19. Your organization recently suffered a loss from malware that wasn't previously known by any trusted sources. What's this? _Zero-Day_
+20. Homer received an email advertising the newest version of a popular smartphone which isn't available elsewhere. It includes a malicious link. Which principle is the email author using? _Scarcity_
