@@ -1,2 +1,12 @@
 1. What is closely associated with residual risk? _???_
-2. You need to calculate the ALE for a server.  The value of the server is $3000, but has crashed 10 times in the past year. Each time it 
+2. You need to calculate the ALE for a server.  The value of the server is $3000, but has crashed 10 times in the past year. Each time it crashed, it resulted in a 10 percent loss. What's the ALE? _$3000_
+3. You need to calculate the expected loss of an incident. Which of the following value combinations would you most likely use? _ALE and ARO_
+4. You want to identify all of the services running on a server. What's a good choice to meet this goal? _Port scanner_
+5. You recently completed a vulnerability scan on your network. It reported that several servers are missing key OS patches. However, after checking the servers, you've verified the servers have these patches installed. What best describes this? _False positive_
+6. You suspect that a database server used by a web app doesn't have current patches. What is a good action to take to verify the server has up-to-date patches? _vulnerability scan_
+7. You need to perform test on your network to identify missing security controls. However, you want to have the least impact on systems that users are accessing What tool is the best to meet this need? _vulnerability scan_
+8. Lisa needs to identify if a risk exists on a web app and if attackers can potentially bypass security controls. However, she should not actively test the app. What's a good choice? _???_
+9. A recent vulnerability scan reported that a web app server is missing some patches. However, after inspecting the server, you realize that the patches are for a protocol that admins removed from the server. What's the best explanation for this disparity? _False negative_
+10. Your organization develops web application software, which it sells to other companies for commercial use. Your organization wants to ensure that the software isn't susceptible to common vulnerabilities, such as buffer overflow attacks and race conditions. What should the organization implement to ensure software meets this standard? _Code review_
+11. An organization has a legacy server within the DMZ. It is running older software that isn't compatible with current patches, so it remains unpatched. Management accepts the risk on this system, but wants to know if attackers can access the internal network if they successfully compromise this server. What's an appropriate test? _Vulnerability Scan_
+12. Testers don't have access to product documentation or any experience with an app. What type of test will they likely perform? _black box_
