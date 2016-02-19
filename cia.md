@@ -14,6 +14,21 @@ _unauthorized personnel_ **cannot** access the data| Message Authentication Code
 
 # Confidentiality
 ### Encryption
+#### File and Folder-Level Encryption
+###### GPG (GNU Privacy Guard) aka PGP (Pretty Good Privacy) [Linux] 
+- can encrypt mail, files, and folders
+
+###### EFS (Encrypting File System) [Windows]
+
+#### Hardware-Based Encryption
+much quicker than software encryption
+characteristic|(TPM) Trusted Platform Module | (HSM) Hardware Security Module
+---|---|---
+Hardware|chip in motherboard, usually included by deault | Removable/external hardware device purchased separate 
+Uses|provides full disk encryption | High-end mission-critical servers
+Authentication|verifies the drive has not moved | application authentication
+Encryption Keys|Includes an RSA key burned into the chip. When activated, generates a storage root key, which is used to generate other keys | stores RSA keys used in asymmetric encryption and can generate keys
+
 #### TLS (Transport Layer Security)
 - Secures transmissions for data in transit
 - Doesn't have a default port, use the port based on what it's encrypting
