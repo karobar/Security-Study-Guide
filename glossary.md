@@ -63,9 +63,6 @@ point in time where you recover to
 ###### IaaS (Infrastructure as a Service)
 a Cloud computing option
 
-###### PGP (Pretty Good Privacy) aka GPG (GNU Privacy Guard)
-- primarily used to encrypt mail
-- can also be used to encrypt data at rest
 
 ###### SMTP (Simple Mail Transfer Protocol)
 transmits data in cleartext (unless combined a with encryption protocol), usually from server to server
