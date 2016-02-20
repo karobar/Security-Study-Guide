@@ -1,1 +1,20 @@
-
+1. Give an example of a technology which can verify data integrity _SHA_
+2. A security technician runs an automated script every night designed to detect changes in files. What are the most likely used protocols in this script? _MD5 and HMAC_
+3. Give three examples of block ciphers. _AES, DES, Blowfish_
+4. What is an algorithm which encrypts data in 64-bit blocks? _DES_
+5. An app developer needs to use an encryption protocol to encrypt credit card data within a database used by the application. Give an example of an algorithm which is fast, while also providing strong confidentiality. _Blowfish_
+6. Your organization uses several differnt types of cryptographic techniques. What is an example of a technique that uses a private and public key? _RSA_
+7. Your network requires a secure method of sharing encryption keys over a public network. What's the best choice? _Diffie-Hellman_
+8. Your organization plans to issue some employees mobile devices such as smartphones and tablets. These devices don't have a lot of processing power. What is an example of a cryptographic methos that has the least overhead and will work with these mobile devices? _ECC_
+9. A manager is suspected of leaking trade secrets to a competitor. A security investigator is examining his laptop and notices a large volume of vacation pictures on the hard drive. Data on this laptop automatically uploads to a private cloud owned by the company once a week. The investigator noticed that the hashes of most of the pictures on the hard drive are different from the hashess of the pictures in the cloud location. What's the most likely explanation for this scenario? _The manager is leaking data using steganography methods_
+10. A heavily used application accesses a financial database on a server within your network. Due to recent data breaches, management wants to ensure transport encryption protects this data. What's the best algorithm to meet this choice? _TLS_
+11. You're planning to encrypt data in transit. What's a protocol which meets this need and encapsulates IP packets with an additional IP header? _IPsec_
+12. Homer wants to send a secure email to Marge so he decides to encrypt it. Homer wants to ensure that Marge can verify that he sent it. Which of the following does Marge need to verify the certificate that Homer used in this process is valid? _The CA's public key_
+13. Bart wants to send a secure email to Lisa so he decides to encrypt it. Bart wants to ensure that Lisa can verify that he sent it. What does Lisa need to meet this requirement? _Bart's public key_
+14. Users in your organization sign their emails with digital signatures. What provides integrity for these certificates? _Hashing_
+15. An application requires users to log on with passwords. The app developers want to store the passwords in such a way that it will thwart rainbow table attacks. What do? _bcrypt_
+16. Homer wants to use digital signatures for his emails and realizes he needs a certificate. What will issue Homer a certificate? _CA_
+17. You need to submit a CSR to a CE. What do you do first? _Generate a new RSA-based private key_
+18. Your organization is planning to implement an internal PKI. What's required to ensure users can validate certificates? _~~An intermediate CA~~ **A CRL includes a list of revoked certificates and it allows users to validate certificates. Any CA can issue a CRL, so an intermediate CA isn't needed.**_
+19. Your organization requires the use of a PKI and it wants to implement a protocol to validate trust with minimal traffic. Which of the following protocols validates trust by returning short responses, such as "good" or "revoked"? _OCSP_
+20. A user's laptop developed a problem and can no longer boot. Help desk personnel tried to recover the data on the disk, but the disk in encrypted. What can be used to retrieve data from the hard drive? _Recovery Agent_
