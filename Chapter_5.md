@@ -1,8 +1,8 @@
 # Hardening
-###### Disable unnecessary services
-###### eliminate unneeded Applications
-###### disabling unnecessary accounts
-###### disable admin tools where not necessary
+ - Disable unnecessary services
+ - eliminate unneeded Applications
+ - disabling unnecessary accounts
+ - disable admin tools where not necessary
 
 ---
 # Baselines
@@ -69,4 +69,64 @@ you can create a VM in a sandbox, which prevents the VM from interacting with an
  - **Disabling unused features**
 
 ##### BYOD Concerns
- - **Acceptable Use Policy (AUP):**
+ - **Acceptable Use Policy (AUP)**
+ - **Adherance to corporate policies**
+ - **Privacy**
+ - **User Acceptance**
+ - **Data Ownership**
+ - **Support Owernership:** Limiting the types of devices supported by an organization
+ - **Architecture/infrastructure considerations:** Restrict all devices to a segmented network
+ - **Forensics**
+ - **Legal concerns**
+ - **On-boarding/off-boarding**
+ - **Onboard camera/video**
+
+##### Mobile Device Management (MDM)
+ - Example: Microsoft ConfigMgr 2012 R2
+ - Patch management
+ - Antivirus management
+ - Application control
+
+---
+# Data Leakage 
+### DLP (Data Loss/Leak Prevention)
+ - Examines and inspects data, looking for unauthorized transmissions
+ - Network-based (data-in-motion)
+ - Storage-based (data-at-rest)
+ - Endpoint-based (data-in-use)
+
+---
+# SANs (Storage Area Network) and Virtual SANs
+ generally more efficient than a typical file server
+
+###### FC (Fibre Channel)
+ - instead of a TCP/IP network
+ - very fast, but expensive
+ - cheaper alternative without cabling = FCoE (FC over Ethernet)
+
+###### iSCSI (Internet Small Computer System Interface)
+ - transfers traditional SCSI commands over IP 
+ - can be implemented within LANs
+
+
+# Cloud Computing
+### SaaS (Software as a Service)
+ - any application provided to users over a network with a web browser
+ - examples: gmail, google docs
+ - **MaaS (Management as a Service):** Management is outsourced. For example a third party can review logs and provide reports
+
+### PaaS (Platform as a Service)
+ - Provides customers with a preconfigured computing platform/OS and applications
+
+### IaaS (Infrastructure as a Service)
+ - outsourcing hardware, support
+
+### Hybrid Cloud
+a combination of two or more clouds
+### Community cloud
+shared by two or more organizations
+### Risks
+
+
+
+
