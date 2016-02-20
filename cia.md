@@ -12,14 +12,51 @@ _unauthorized personnel_ **cannot** access the data| Message Authentication Code
 |||cooling systems
 |||patching
 
+--- 
 # Confidentiality
-### Encryption
+### Encryption 
+#### Symmetric/Secret-key/Session-key encryption
+using the same key to encrypt and decrypt
+Algorithm | cipher type | Block Size (bits) | Key Size (bits) |Comments
+---|---|---|---|---
+AES | block | 128 | 128, 192, or 256-bit | fast, efficient, and strong. 
+DES | block | 64 | 56 | very old and broken
+3DES | block | 64 | 56, 112, or 168 | uses multiple passes of DES. weaker than AES. 
+RC4 | stream | N/A| 40-2048 | used in WEP, SSL, and TLS
+Blowfish | block | 64 | 32-448 | DES replacement
+Twofish | block | 128 | 128, 192, or 256 |
+One-Time pad||||very old, used by spies
+
+###### Diffie-Hellman
+an algorithm used to privately shared symmetric keys between parties
+
+#### Asymmetric encryption
+ - uses a matched pair of keys
+ - require a certificate and a PKI
+ - resource intensive
+
+Method | Comments 
+---|---
+RSA | widely used. a minimum of 1024 bit keys, but should probably use 2048
+ECC | doesn't take much processing power
+
+Static Keys | Ephemeral Keys
+---|---
+used by RSA | used for a single session
+can be validated | comply with **perfect forward secrecy**, which means that given the _same_ input, the algorithm produces _different_ public keys
+
+#### Ciphers
+###### Stream Ciphers
+- encrypt data one bit at a time
+- example: RC4
+
+###### Block ciphers
+encrypts data in specific-sized blocks, such as 64/128-bit blocks
+
 #### File and Folder-Level Encryption
 ###### GPG (GNU Privacy Guard) aka PGP (Pretty Good Privacy) [Linux] 
-- can encrypt mail, files, and folders
-
+can encrypt mail, files, and folders
 ###### EFS (Encrypting File System) [Windows]
-
 #### Hardware-Based Encryption
 much quicker than software encryption
 characteristic|(TPM) Trusted Platform Module | (HSM) Hardware Security Module
@@ -29,20 +66,16 @@ Uses|provides full disk encryption | High-end mission-critical servers
 Authentication|verifies the drive has not moved | application authentication
 Encryption Keys|Includes an RSA key burned into the chip. When activated, generates a storage root key, which is used to generate other keys | stores RSA keys used in asymmetric encryption and can generate keys
 
-#### TLS (Transport Layer Security)
-- Secures transmissions for data in transit
-- Doesn't have a default port, use the port based on what it's encrypting
-
-###### TTLS (Tunneled Transport Layer Security)
-
-#### SSL 
-Doesn't have a default port, use the port based on what it's encrypting
+#### Transport encryption
+Method | comments
+---|---
+TLS | Replacement for SSL. requires certificates issued by CAs. 
+SSL | requires certificates issued by CAs. uses asymmetric encryption to share session keys, and symmetric encryption to encrypt data transmitted. 
+IPsec | uses HMAC. can use AES or 3DES for encryption with ESP. When IPsec uses ESP, it encrypts the entire packet (including the header), then slaps another IP header on
+SSH | 
 
 #### FTPS (File Transfer Protocol Secure)
 uses either SSL or TLS 
-
-#### HTTPS
-uses SSL or TLS
 
 #### Wireless Encryption
 ##### WEP (Wired Equivalent Privacy)
@@ -106,8 +139,9 @@ Users claim an identity (i.e. with a username) | users prove their identity (i.e
  - password
 
 ###### Digital Signature
- - **non-repudiation**
+ - provides non-repudiation 
  - also provide integrity
+ - an **encrypted hash** of a message
 
 ##### Authentication Services
 ###### Kerberos
@@ -143,17 +177,19 @@ Users claim an identity (i.e. with a username) | users prove their identity (i.e
 
 **Same Sign-On:** Users can access multiple systems using the same credentials, but they have to enter their credentials again each time they access a new resource. 
 
-###### Authenticating RAS (Remote Access Service) Clients
+###### Authenticating RAS Clients
  - provide access to a network from an outside source
- - Multiple Methods:
-   - **Password Authentication Protocol (PAP)**: sends passwrds in cleartext, so is susceptible to sniffing. uses PPP
-   - **Challenge Handshake Authentication Protocol (CHAP):** Server challenges client for authentication information. uses PPP.
-   - **Microsoft CHAP (MS-CHAP)**
-   - **MS-CHAPv2**
-   - **RADIUS (Remote Authentication Dial-In User Service):** provides a centralized method of authentication for multiple remote access servers. Encrypts password packets.
-   - **Diameter:** an improvement over RADIUS. Supports Extensible Authentication Protocol (EAP).
-   - **XTACACS (Extended Terminal Access Controller Access-Control System):** proprietary Cisco. Improvement over TACACS.
-   - **TACACS+ (Terminal Access Controller Access-Control System Plus):** alternative to RADIUS. Proprietary Cisco. Can interact with Kerberos. encrypts the entire process
+
+RAS client| comments
+---|---
+PAP | sends passwrds in cleartext, so is susceptible to sniffing. uses PPP
+CHAP | Server challenges client for authentication information. uses PPP.
+MS-CHAP | 
+RADIUS | provides a centralized method of authentication for multiple remote access servers. Encrypts password packets **using symmetric encryption**. An AAA protocol
+Diameter | an improvement over RADIUS. Supports Extensible Authentication Protocol (EAP).
+XTACACS | proprietary Cisco. Improvement over TACACS.
+TACACS | alternative to RADIUS. Proprietary Cisco. Can interact with Kerberos. encrypts the entire process
+
 
 ##### Something you have
 ###### Smart Cards
@@ -184,12 +220,22 @@ Errors:
   - **False acceptance:** incorrectly identifies an _unauthorized_ user as an _authorized_ user. **FAR** (False Acceptance Rate/Type 2 error)
   - **False rejection:** **FRR/type 1 error**
 
+---
 # Integrity
-#### Hashing
-###### SHA-1 (Secure Hash Algorithm 1)
-#### Digital Signatures
-Require the use of certificates and a PKI
+### Hashing 
+Algorithm | Type | Comments
+---|---|---
+MD5 | Hash + Integrity | 128-bit hashes
+SHA-1 | Hash + Integrity | 160-bit hashes
+SHA-2 | Hash + Integrity | 224,256,384, and 512-bit 
+SHA-3 | Hash + Integrity | like SHA2 but uses a different method
+HMAC | Integrity/Authenticity | 'extends' MD5 or SHA1. used with IPsec. uses a 'shared secret'
+---|---|---
+RIPEMD | Hash + Integrity | 128, 160, 256, and 320
+LANMAN | Hash + Integrity | very old and bad Microsoft
+NTLM | Hash + Integrity | improved microsoft
 
+---
 # Availability
 #### Redundancy
 ###### Site Redundancy
