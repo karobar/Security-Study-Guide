@@ -1,8 +1,7 @@
 # Connectivity Protocols
 ## IPv4
 ### Subnetting
- - isolates traffic
- - increases efficiency
+ - isolates traffic, which increases efficiency
  - CIDR notation uses the '/' followed by the number of 1s in the subnet mask
    - 255.255.255.0 becomes /24
 
