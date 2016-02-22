@@ -1,7 +1,6 @@
 # Connectivity Protocols
 ## IPv4
 ### Subnetting
- - divides a single range of classful IP addresses into two or more smaller ranges of IP addesses. 
  - isolates traffic
  - increases efficiency
  - CIDR notation uses the '/' followed by the number of 1s in the subnet mask
