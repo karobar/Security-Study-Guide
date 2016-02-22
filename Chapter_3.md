@@ -8,20 +8,20 @@
 
 ### Classes 
 
-Class | First Octet Number
+Class | Range 
 ---|---
-A  | 1-126
-B | 128-191
-C | 191-223
+A  | [0-128)
+B | [128-192)
+C | [192-224)
 
 ### Private Addresses
 can only be used within a private network for configuration
 
-Class | Range
+Class | Range 
 ---|---
-A | 10.0.0.0-10.255.255.255
-B | 172.16.0.0-172.16.255.255
-C | 192.168.0.0-192.168.255.255
+A | [10-11)
+B | [172.16-172.32)
+C | [192.168-192.169)
 
 ### Reservation
 A set of addresses to request from the DHCP server so that specific hosts can have specific addresses
