@@ -30,9 +30,6 @@ A set of addresses to request from the DHCP server so that specific hosts can ha
  - Not internet-routable
  - assigned if a device can't get an address (or one requested by reservation)
 
-## IPv6  
-has tunneling services from IPsec built in, can encrypt any type of traffic
-
 ## TCP
 three way hadnshake, SYN/ACKs
 ## UDP
