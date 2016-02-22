@@ -156,10 +156,10 @@ Users claim an identity (i.e. with a username) | users prove their identity (i.e
     - specifies formats and methods to query **directories** (a database of objects that provides a centrall access point to manage users, computers, and other directory objects)
     - an extension of the X.500 standard
     - Windows = Active Directory domains, Unix = LDAP
-    - **Example**: A user _Homer_ in the _Users_ container within the _example.com_ domain is identified with the following LDAP string: 
-      ```LDAP://CN=Homer,CN=Users,DC=example,DC=com```
+    - **Example**: A user _Homer_ in the _Users_ container within the _example.com_ domain is identified with the following LDAP string: `LDAP://CN=Homer,CN=Users,DC=example,DC=com`
     - CN is short for _common name_ or _container_,  depending on context; DC is short for _domain component_
-- Secure LDAP uses TLS or SSL to encryption to protect LDAP
+    - Secure LDAP uses TLS or SSL to encryption to protect LDAP
+
 
 ###### Sign-On
 **Single Sign-On (SSO):** 
