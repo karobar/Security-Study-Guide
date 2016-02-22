@@ -45,6 +45,7 @@ MAC | SSID | Encryption | Power
 12:AB:34:CD:56:EF | GetCertifiedGetAhead | WPA2 | 49
 
 What's the most likely explanation? _An evil twin is in place_
+
 38. Mobile users in your network report that they frequently lose connectivity with the wireless network on some days, but on other days they don't have any problems. What could cause this? _Wireless jamming_
 39. Management within your organiztion wants some users to be able to access internal network resources from remote locations. What's the best choice to meet this need? _VPN_
 40. You suspect that an executable file on a web server is malicious and includes a zero-day exploit. What steps can you take to verify your suspicions? _Perform an OS baseline comparison_
