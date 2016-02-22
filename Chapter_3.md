@@ -7,15 +7,22 @@
    - 255.255.255.0 becomes /24
 
 ### Classes 
-determine the class by looking at the first octet
-###### Class A (1-126)
-###### Class B (128-191)
-###### Class C (191-223)
+
+Class | First Octet Number
+---|---
+A  | 1-126
+B | 128-191
+C | 191-223
+
 ### Private Addresses
 can only be used within a private network for configuration
-###### Class A (10.0.0.0-10.255.255.255)
-###### Class B (172.16.0.0-172.16.255.255)
-###### Class C (192.168.0.0-192.168.255.255)
+
+Class | Range
+---|---
+A | 10.0.0.0-10.255.255.255
+B | 172.16.0.0-172.16.255.255
+C | 192.168.0.0-192.168.255.255
+
 ### Reservation
 A set of addresses to request from the DHCP server so that specific hosts can have specific addresses
 ### APIPA (Automatic Private IP Addressing)
