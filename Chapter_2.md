@@ -19,9 +19,9 @@ there are _objects_, such as files, folders, shares, and printers, and _subjects
  - Example: Top Secret, Secret, Confidential
 
 ### Role-based access control (role-BAC/RBAC)
-uses group-based privileges
+- uses group-based privileges
+- An example is Microsoft Project Server, which uses the following role-BAC matrix:
 
-An example is Microsoft Project Server, which uses the following role-BAC matrix:
 Role | Server privileges | Project Privileges
 ---|---|---
 Administrators|All|All
@@ -32,6 +32,7 @@ Team Members|None|Access for assigned tasks, limited views within scope of their
 ### Rule-base access control (rule-BAC/RBAC)
 ##### ACLs - Access Control Lists
 Generally take the following format:  
+
 Permission | Protocol | Source | Destination | Port
 --- | --- | --- | --- | ---
 DENY or ALLOW| TCP/UDP/IP, occasionally ICMP |  IP addr (or range,subnet,ANY) | IP addr (or range,subnet,ANY)|  #
