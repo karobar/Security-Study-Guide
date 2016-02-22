@@ -110,6 +110,7 @@ the attacker uses packet injection techniques to add additional packets into the
 
 ## Access Controls
 Ensure that only authorized personnel can access data.   
+
 Identification|Authentication|Authorization
 ---|---|---
 Users claim an identity (i.e. with a username) | users prove their identity (i.e. with a password) | grant or restrict access to resources (i.e. permissions)
